@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .box {
+            font-size: 50px;
+            color: white;
+            height: 750px;
+            width: 750px;
+            border-radius: 50px;
+            background: #191919;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+        }
+
+        button {
+            font-size: 35px;
+            height: 100px;
+            width: 100px;
+            background: white;
+            color: black;
+            font-weight: 600;
+            border-radius: 10px;
+            border: 10px solid black;
+        }
+    </style>
+    <title>Pedido</title>
+</head>
+<body>
+    <div class="box">
+        <p>Bora Sexo?</p>
+        <div class="buttons-container">
+            <button><a href="https://s2-techtudo.glbimg.com/F8ajbKxRBFapLChgLfk6myj7fUI=/0x0:560x300/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/m/R/JxAbbVRJmTBTheHXAvgA/diabo-sorridente.png">Sim</a></button>
+            <button id="no">Não</button>
+        </div>
+    </div>
+</body>
+<script>
+    let button = document.getElementById('no');
+    let height = window.innerHeight - 50;
+    let width = window.innerWidth - 50;
+
+    button.addEventListener('mouseover', function () {
+        button.style.position = "absolute"
+        button.style.top = Math.random() * height + "px";
+        button.style.left = Math.random() * width + "px";
+    })
+</script>
+</html>
